@@ -1,0 +1,15 @@
+.Operator{
+    width: 100px;
+    height: 100px;    
+    margin: 5px 5px;
+    background-color: #E5E8E8;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.Operator:hover{
+    color: #555;
+}

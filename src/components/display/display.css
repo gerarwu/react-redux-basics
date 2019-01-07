@@ -1,0 +1,24 @@
+.Display-title{    
+    padding-top: 10px;
+    font-size: 20px;    
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Display-result{
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-radius: 5px;
+    max-width: 500px;
+    color: #333;
+}
+
+@media ( max-width: 700px ){
+    .Display-result{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

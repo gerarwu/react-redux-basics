@@ -1,5 +1,13 @@
+*, *::after, *::before{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  
+  min-height: 100vh;
+  background-color: #4E6162;
 }
 
 .App-logo {
