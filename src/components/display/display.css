@@ -1,8 +1,9 @@
 .Display-title{    
     padding-top: 10px;
-    font-size: 20px;    
+    font-size: 25px;    
     margin-bottom: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .Display-result{
@@ -10,10 +11,13 @@
     border: 1px solid #bbb;
     margin: auto;
     margin-bottom: 10px;
-    padding: 5px 0;
+    padding: 5px 10px;
     border-radius: 5px;
-    max-width: 500px;
+    max-width: 400px;
     color: #333;
+    text-align: right;    
+    font-weight: bold;
+    box-shadow: 0px 1px 4px #bbb;
 }
 
 @media ( max-width: 700px ){

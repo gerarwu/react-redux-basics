@@ -5,7 +5,7 @@ class Operartor extends Component{
 
     render(){
         return(
-            <div className='Operator'>{this.props.label}</div>
+            <div className='Operator' onClick={this.props.clicked} >{this.props.label}</div>
         );
     }
 
