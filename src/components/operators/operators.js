@@ -20,6 +20,11 @@ class operatorContainer extends Component {
                 <Operator label='add 5' clicked={ this.props.onIncrementCounter.bind(null, 5) } />
                 <Operator label='add 10' clicked={ this.props.onIncrementCounter.bind(null, 10) } />
                 <Operator label='add 20' clicked={ this.props.onIncrementCounter.bind(null, 20) } />
+                <Operator label='add 200' clicked={ this.props.onIncrementCounter.bind(null, 200) } />
+                <Operator label='add 1000' clicked={ this.props.onIncrementCounter.bind(null, 1000) } />
+
+                <Operator label='res 1000' clicked={ this.props.onDecrementCounter.bind(null, 1000) } />
+                <Operator label='res 200' clicked={ this.props.onDecrementCounter.bind(null, 200) } />
                 <Operator label='res 20' clicked={ this.props.onDecrementCounter.bind(null, 20) } />
                 <Operator label='res 10' clicked={this.props.onDecrementCounter.bind(null, 10)} />
                 <Operator label='res 1' clicked={ this.props.onDecrementCounter.bind(null, 1)} />
@@ -37,7 +42,7 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch) =>{
     return{
         onIncrementCounter: (value)=> dispatch({type: 'INCREMENT', value: value}),
-        onDecrementCounter: (value)=> dispatch({type: 'DECREMENT', value: value})
+        onDecrementCounter: (value)=> dispatch({type: 'DECREMENT', value: value}),        
     }
 }
 

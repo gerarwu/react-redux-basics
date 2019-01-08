@@ -1,0 +1,38 @@
+.Results{
+    text-align: center;
+}
+
+.Results-save-button{
+    outline: 0;
+    border: 3px solid #597677;    
+    background-color: #6EB1B4;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Results-save-button:active{
+   opacity: 0.8;
+}
+
+.Results-list{
+    list-style: none;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Results-list li {
+    background-color: #597677;
+    margin-bottom: 8px;
+}
+
+.Results-list span{
+    position: absolute;
+    right: 0;    
+    background-color: #E5E8E8;
+    padding: 0 10px;
+    cursor: pointer;
+}
