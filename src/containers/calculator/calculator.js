@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Aux from '../../hoc/aux/aux';
 import Display from '../../components/display/display';
 import OperatorContainer from '../operatorContainer/operatorContainer';
 
@@ -6,10 +7,10 @@ class Calculator extends Component{
 
     render(){
          return(
-            <div>
+            <Aux>
                 <Display />
                 <OperatorContainer />
-            </div>
+            </Aux>
         );
     }
 
