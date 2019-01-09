@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect }from 'react-redux';
+import * as actions from '../../store/actions';
 import './results.css';
 
 class Results extends Component{
 
     componentDidUpdate(){
         console.log(this.props.statesResults);
+        console.log(this.props.ctr);
     }
 
     render(){
@@ -20,7 +22,7 @@ class Results extends Component{
 
         return(
             <div className='Results'>
-                <button className='Results-save-button' onClick={ this.props.onStoreResult }> Save result </button>
+                <button className='Results-save-button' onClick={ this.props.onStoreResult.bind(null, this.props.ctr) }> Save result </button>
                 <ul className='Results-list'>
                     {results}                  
                 </ul>
@@ -31,14 +33,15 @@ class Results extends Component{
 
 const mapStateToProps = (state) =>{
     return{
-        statesResults: state.results
+        statesResults: state.res.results,
+        ctr: state.ctr.counter
     }
 };
 
 const mapDispatchToProps = (dispatch) =>{
     return{        
-        onStoreResult: () => dispatch({type: 'STORE_RESULT'}),
-        onDeleteResult: (id) => dispatch({type: 'DELETE_RESULT', idDelete: id})
+        onStoreResult: (ctr) => dispatch({type: actions.STORE_RESULT, counter: ctr}),
+        onDeleteResult: (id) => dispatch({type: actions.DELETE_RESULT, idDelete: id})
     }
 }
 
