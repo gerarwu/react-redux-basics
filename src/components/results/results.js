@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { connect }from 'react-redux';
-import * as actions from '../../store/actions';
+import { storeResult, deleteResult } from '../../store/actions/index';
 import './results.css';
 
 class Results extends Component{
-
-    componentDidUpdate(){
-        console.log(this.props.statesResults);
-        console.log(this.props.ctr);
-    }
 
     render(){
         const resultsCopy = [...this.props.statesResults];
@@ -40,8 +35,8 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) =>{
     return{        
-        onStoreResult: (ctr) => dispatch({type: actions.STORE_RESULT, counter: ctr}),
-        onDeleteResult: (id) => dispatch({type: actions.DELETE_RESULT, idDelete: id})
+        onStoreResult: (ctr) => dispatch(storeResult(ctr)),
+        onDeleteResult: (id) => dispatch(deleteResult(id))
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions  from '../../store/actions';
+import { increment, decrement }  from '../../store/actions/index';
 import Operator from './operator/operator';
 import './operators.css';
 
@@ -42,8 +42,8 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) =>{
     return{
-        onIncrementCounter: (value)=> dispatch({type: actions.INCREMENT, value: value}),
-        onDecrementCounter: (value)=> dispatch({type: actions.DECREMENT, value: value}),        
+        onIncrementCounter: (value)=> dispatch( increment(value)),
+        onDecrementCounter: (value)=> dispatch( decrement(value)),        
     }
 }
 
